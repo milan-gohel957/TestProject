@@ -1,3 +1,4 @@
+using AutoMapper;
 using TestProject.Entity.Data;
 using TestProject.Entity.Models;
 using TestProject.Repository.Interfaces;
@@ -8,13 +9,15 @@ public class UnitOfWork : IUnitOfWork
 {
     public IGenericRepository<User> User { get; private set; }
     public IGenericRepository<Role> Role { get; private set; }
+    private IMapper _mapper;
     private ProjectContext _context;
 
-    public UnitOfWork(ProjectContext context)
+    public UnitOfWork(ProjectContext context, IMapper mapper)
     {
         _context = context;
-        User = new GenericRepository<User>(_context);
-        Role = new GenericRepository<Role>(_context);
+        _mapper = mapper;
+        User = new GenericRepository<User>(_context, _mapper);
+        Role = new GenericRepository<Role>(_context, _mapper);
     }
 
     public async Task<ResultObject> SaveAsync()
@@ -24,7 +27,7 @@ public class UnitOfWork : IUnitOfWork
             await _context.SaveChangesAsync();
             return new() { Status = true, Message = "context Saved!" };
         }
-        catch (System.Exception)
+        catch (Exception)
         {
             return new() { Status = false, Message = "Failed to save context." };
         }

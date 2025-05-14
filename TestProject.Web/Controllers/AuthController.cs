@@ -25,10 +25,12 @@ public class AuthController : Controller
             TempData["error"] = "Model State is invalid";
             return View(loginModel);
         }
+
         var key = _configuration["JwtConfig:Key"] ?? string.Empty;
         var issuer = _configuration["JwtConfig:Issuer"] ?? string.Empty;
         var audience = _configuration["JwtConfig:Issuer"] ?? string.Empty;
         ResultObject resultObject = await _authService.LoginAsync(loginModel, key, issuer, audience);
+        
         if(!resultObject.Status)
         {
             TempData["error"] = resultObject.Message;

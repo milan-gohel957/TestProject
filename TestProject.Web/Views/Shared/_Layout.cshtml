@@ -58,6 +58,7 @@
                 <div class="p-2 d-none d-sm-block">
                     @if (User.Identity != null && User.Identity.IsAuthenticated)
                     {
+                        <span class="text-white me-2">@User.FindFirst(ClaimTypes.Email)?.Value.ToString()</span>
                         <a asp-action="LogOut" asp-controller="Auth">
                             <button class="btn btn-danger">LogOut</button>
                         </a>

@@ -1,10 +1,12 @@
 using System.Net;
 using System.Security.Claims;
 using System.Text;
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using TestProject.Entity.Data;
+using TestProject.Entity.Mappings;
 using TestProject.Repository.Implementations;
 using TestProject.Repository.Interfaces;
 using TestProject.Service.Implementations;
@@ -21,7 +23,7 @@ builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepositor
 builder.Services.AddDbContext<ProjectContext>(options =>
     options.UseNpgsql(connectionString, y => y.MigrationsAssembly("TestProject.Entity"))
 );
-
+builder.Services.AddAutoMapper(typeof(AutoMappings));
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
 {
