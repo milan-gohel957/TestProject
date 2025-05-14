@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using TestProject.Entity.Models;
 using TestProject.Entity.ViewModels;
 using TestProject.Repository.Interfaces;
+using TestProject.Service.Helpers;
 using TestProject.Service.Interfaces;
 
 namespace TestProject.Service.Implementations;
@@ -48,7 +49,7 @@ public class AuthService:IAuthService
         if(user == null) return new(){Status = false, Message = "User Not Found."};
 
         // TODO: Change password to hashed password
-        if(!user.Password.Equals(loginModel.Password.Trim()))
+        if(!Hash.VerifyPassword(user.Password, loginModel.Password.Trim()))
         {
             return new(){Status = false, Message = "Invalid Credentials."};
         }
@@ -59,13 +60,13 @@ public class AuthService:IAuthService
             return new(){Status = false, Message = "Error while generating Token."};
         }
 
-        _httpContextAccessor.HttpContext.Response.Cookies.Append("accessToken", accessToken, new(){
+        _httpContextAccessor?.HttpContext?.Response.Cookies.Append("accessToken", accessToken, new(){
             HttpOnly = true,
             Secure = true,
             SameSite = SameSiteMode.Strict,
             Expires = loginModel.RememberMe ? DateTime.UtcNow.AddDays(15) : DateTime.UtcNow.AddMinutes(30),
         });
-
+        
         return new(){Status = true, Message = "User Logged In Successfully.", RedirectUrl = "/"};
     }
     

@@ -34,6 +34,7 @@ public class AuthController : Controller
             TempData["error"] = resultObject.Message;
             return View(loginModel);
         }
+        TempData["success"] = "Login Successfull!";
         return RedirectToAction("Index", "Home");
     }
     public IActionResult LogOut()

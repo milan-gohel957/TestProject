@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ia4TvmZskmxcDIexj7/iZiSOJ49Ogk7AnkuUTyvjDpLxAKEdOWzm/iRJqjvgYsQoKRET0TxV+x/jvS9qerzdmg==",
+  "dgSpecHash": "7soESlFDlXOskgbCA3V/kcNi3mHyrwXSbaVxwlazt4TK3DA1yX5eY3Ncms5NnUjtxLWAlmi5g8nEmf53fcEBRQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Repository\\TestProject.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pctr49\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\pctr49\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.20\\microsoft.aspnetcore.cryptography.internal.7.0.20.nupkg.sha512",
+    "C:\\Users\\pctr49\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.20\\microsoft.aspnetcore.cryptography.keyderivation.7.0.20.nupkg.sha512",
     "C:\\Users\\pctr49\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.20\\microsoft.entityframeworkcore.7.0.20.nupkg.sha512",
     "C:\\Users\\pctr49\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.20\\microsoft.entityframeworkcore.abstractions.7.0.20.nupkg.sha512",
     "C:\\Users\\pctr49\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.20\\microsoft.entityframeworkcore.analyzers.7.0.20.nupkg.sha512",
