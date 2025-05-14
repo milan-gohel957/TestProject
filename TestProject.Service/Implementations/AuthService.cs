@@ -48,7 +48,6 @@ public class AuthService:IAuthService
         User? user = await _unitOfWork.User.GetFirstOrDefaultAsync(expression: x => x.Email.Trim() == loginModel.Email);
         if(user == null) return new(){Status = false, Message = "User Not Found."};
 
-        // TODO: Change password to hashed password
         if(!Hash.VerifyPassword(user.Password, loginModel.Password.Trim()))
         {
             return new(){Status = false, Message = "Invalid Credentials."};
