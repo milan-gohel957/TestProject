@@ -4,14 +4,14 @@
     "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Web\\TestProject.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Web\\TestProject.Web.csproj": {
+    "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Entity\\TestProject.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Web\\TestProject.Web.csproj",
-        "projectName": "TestProject.Web",
-        "projectPath": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Web\\TestProject.Web.csproj",
+        "projectUniqueName": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Entity\\TestProject.Entity.csproj",
+        "projectName": "TestProject.Entity",
+        "projectPath": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Entity\\TestProject.Entity.csproj",
         "packagesPath": "C:\\Users\\pctr49\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Web\\obj\\",
+        "outputPath": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pctr49\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,242 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.*, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[7.*, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[7.*, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.410\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Repository\\TestProject.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Repository\\TestProject.Repository.csproj",
+        "projectName": "TestProject.Repository",
+        "projectPath": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Repository\\TestProject.Repository.csproj",
+        "packagesPath": "C:\\Users\\pctr49\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pctr49\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Entity\\TestProject.Entity.csproj": {
+                "projectPath": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Entity\\TestProject.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.410\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Service\\TestProject.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Service\\TestProject.Service.csproj",
+        "projectName": "TestProject.Service",
+        "projectPath": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Service\\TestProject.Service.csproj",
+        "packagesPath": "C:\\Users\\pctr49\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pctr49\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Repository\\TestProject.Repository.csproj": {
+                "projectPath": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Repository\\TestProject.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.*, )"
+            },
+            "Microsoft.IdentityModel.Logging": {
+              "target": "Package",
+              "version": "[7.*, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.410\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Web\\TestProject.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Web\\TestProject.Web.csproj",
+        "projectName": "TestProject.Web",
+        "projectPath": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Web\\TestProject.Web.csproj",
+        "packagesPath": "C:\\Users\\pctr49\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pctr49\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Entity\\TestProject.Entity.csproj": {
+                "projectPath": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Entity\\TestProject.Entity.csproj"
+              },
+              "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Service\\TestProject.Service.csproj": {
+                "projectPath": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Service\\TestProject.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.*, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.*, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[7.*, )"
+            },
+            "Microsoft.IdentityModel.Logging": {
+              "target": "Package",
+              "version": "[7.*, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[7.*, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.*, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.*, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

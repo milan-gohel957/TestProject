@@ -4,6 +4,77 @@
     "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Repository\\TestProject.Repository.csproj": {}
   },
   "projects": {
+    "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Entity\\TestProject.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Entity\\TestProject.Entity.csproj",
+        "projectName": "TestProject.Entity",
+        "projectPath": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Entity\\TestProject.Entity.csproj",
+        "packagesPath": "C:\\Users\\pctr49\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pctr49\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.*, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[7.*, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[7.*, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.410\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Repository\\TestProject.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -25,7 +96,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Entity\\TestProject.Entity.csproj": {
+                "projectPath": "C:\\Users\\pctr49\\Desktop\\TestProject\\TestProject.Entity\\TestProject.Entity.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

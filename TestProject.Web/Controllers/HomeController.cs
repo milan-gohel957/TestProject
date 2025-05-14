@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TestProject.Web.Models;
 
@@ -12,12 +13,13 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-
+    [Authorize(Roles = "Admin,User")]
     public IActionResult Index()
     {
         return View();
     }
 
+    [Authorize(Roles = "Admin")]
     public IActionResult Privacy()
     {
         return View();
