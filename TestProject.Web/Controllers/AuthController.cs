@@ -16,6 +16,11 @@ public class AuthController : Controller
     }
     public IActionResult Login()
     {
+        if(User.Identity != null && User.Identity.IsAuthenticated)
+        {
+            return RedirectToAction("Index", "Home");
+        }
+        
         return View();
     }
     [HttpPost]

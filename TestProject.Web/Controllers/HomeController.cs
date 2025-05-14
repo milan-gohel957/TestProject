@@ -20,9 +20,15 @@ public class HomeController : Controller
     }
 
     [Authorize(Roles = "Admin")]
-    public IActionResult Privacy()
+    public IActionResult Admin()
     {
         return View();
+    }
+
+    [Authorize(Roles = "User")]
+    public IActionResult UserPage()
+    {
+        return View("User");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
